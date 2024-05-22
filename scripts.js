@@ -24,4 +24,8 @@ provinces.map((provinces) =>{
 orderProvince = provinces.sort()  
 console.log(orderProvince)
 
-
+//Use `filter` to remove provinces containing "Cape". Log the count of remaining provinces.
+noCape = provinces.filter((provinces) => {
+  return provinces.indexOf("Cape") === -1
+})
+console.log(noCape)
