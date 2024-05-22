@@ -20,3 +20,8 @@ provinces.map((provinces) =>{
   console.log(upperProvinces) 
 })
 
+//Use `sort` to alphabetically sort the provinces. 
+orderProvince = provinces.sort()  
+console.log(orderProvince)
+
+
