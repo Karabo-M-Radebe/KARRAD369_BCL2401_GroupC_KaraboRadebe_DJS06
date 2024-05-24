@@ -13,6 +13,16 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+// Use `forEach` to log each name and each province to the console. Then, log each name with a matching province in the format "Name (Province)"
+names.forEach((names) => {
+  console.log(names)
+})
+
+provinces.forEach((provinces) => {
+  console.log(provinces)
+})
+
+
 
 //Use `map` to create a new array of province names in all uppercase. Log the new array to the console.
 provinces.map((provinces) =>{
