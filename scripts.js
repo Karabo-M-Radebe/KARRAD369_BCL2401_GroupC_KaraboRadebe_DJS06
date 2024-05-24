@@ -62,3 +62,37 @@ const nameToProvince = names.reduce((acc, name, index) => {
   return acc
 }, {})
 console.log(nameToProvince)
+
+//ADVANCED EXERCISES
+
+// Iterate over the products array, logging each product name.
+products.map(product => product.product)
+
+// Filter out products with names longer than 5 characters.
+products.filter(product => product.product.length )
+
+// Filter out products without prices, convert string prices to numbers, and calculate the total price using `reduce`.
+products.filter(product => product.price).map(product => ({...product, price: Number(product.price)})).reduce((acc,product) => acc + product.price, 0)
+
+// Use `reduce` to concatenate all product names into a single string.
+products.reduce((acc, product) => acc + product.product, '')
+
+// Identify the highest and lowest-priced items, returning a string formatted as "Highest: X. Lowest: Y."
+products.reduce((results, product) => {
+  const price = parseInt(product.price)
+  if (price) {
+    results.Highest = Math.max(results.Highest || 0, price)
+  }
+  if (price) {
+    results.Lowest = Math.min(results.Lowest || Infinity, price)
+  }
+  return results
+},
+{Highest:undefined, Lowest:undefined}
+)
+
+// Using `Object.entries` and `reduce`, recreate the products object with keys 'name' and 'cost', maintaining their original values.
+Object.entries(products).reduce((acc, [index,{product,price}]) => {
+  acc[index] = {name: product, cost:price};
+  return acc
+}, [])
