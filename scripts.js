@@ -2,7 +2,7 @@
 const provinces = ['Western Cape', 'Gauteng', 'Northern Cape', 'Eastern Cape', 'KwaZulu-Natal', 'Free State']
 
 // A list of names:
-const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifso', 'Shailen', 'Frikkie']
+const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifiso', 'Shailen', 'Frikkie']
 
 // A list of products with prices:
 const products = [
@@ -18,6 +18,11 @@ const products = [
 provinces.map((provinces) =>{
   upperProvinces = provinces.toUpperCase()
   console.log(upperProvinces) 
+})
+
+//Create a new array using `map` that contains the length of each name.
+names.map((names) => {
+  console.log(names.length)
 })
 
 //Use `sort` to alphabetically sort the provinces. 
