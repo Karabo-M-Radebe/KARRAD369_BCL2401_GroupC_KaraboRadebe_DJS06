@@ -29,3 +29,10 @@ noCape = provinces.filter((provinces) => {
   return provinces.indexOf("Cape") === -1
 })
 console.log(noCape)
+
+//Create a boolean array using `map` and `some` to determine if a name contains the letter 'S'.
+const namesWithS = names.map((names, newNames) => {
+  return names.includes('S') 
+})
+
+console.log(namesWithS)
