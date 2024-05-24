@@ -51,3 +51,11 @@ const namesWithS = names.map((names, newNames) => {
 })
 
 console.log(namesWithS)
+
+//Use `reduce` to transform the names array into an object mapping names to their respective provinces.
+
+const nameToProvince = names.reduce((acc, name, index) => {
+  acc[name] = provinces[index]
+  return acc
+}, {})
+console.log(nameToProvince)
